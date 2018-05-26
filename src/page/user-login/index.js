@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-21 17:42:58
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-05-26 15:45:40
+ * @Last Modified time: 2018-05-26 17:19:12
  */
 'user strict';
 require('./index.css');
@@ -23,7 +23,7 @@ var formError = {
 //page逻辑部分
 var page = {
     init: function() {
-        thid.bindEvent();
+        this.bindEvent();
     },
     bindEvent: function() {
         var _this = this;
