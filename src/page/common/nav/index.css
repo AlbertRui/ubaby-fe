@@ -2,12 +2,12 @@
 * @Author: Administrator
 * @Date:   2018-05-25 20:03:45
 * @Last Modified by:   Administrator
-* @Last Modified time: 2018-05-25 20:47:49
+* @Last Modified time: 2018-05-26 16:40:15
 */
 .nav{
     background: #eee;
     height: 30px;
-    line-height: 30px;
+    line-height: 30px;   
 }
 /* 用户部分 */
 .nav .user{
