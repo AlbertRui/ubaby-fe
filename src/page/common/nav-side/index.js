@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-25 23:05:28
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-05-25 23:53:18
+ * @Last Modified time: 2018-05-26 22:21:03
  */
 'use strict';
 require('./index.css');
@@ -21,9 +21,9 @@ var navSide = {
             desc: '我的订单',
             href: './order-list.html'
         }, {
-            name: 'pass-update',
+            name: 'user-pass-update',
             desc: '修改密码',
-            href: './pass-update.html'
+            href: './user-pass-update.html'
         }, {
             name: 'about',
             desc: '关于ubaby',

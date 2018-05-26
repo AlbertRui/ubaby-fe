@@ -2,14 +2,14 @@
  * @Author: Administrator
  * @Date:   2018-05-26 19:43:58
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-05-26 21:32:10
+ * @Last Modified time: 2018-05-26 22:18:53
  */
 'use strict';
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/c_ubabyon/header/index.js');
 var navSide = require('page/common/nav-side/index.js');
-var _ubaby = require('util/_ubaby.js');
+var _ubaby = require('util/ubaby.js');
 var _user = require('service/user-service.js');
 var templateIndex = require('./index.string');
 
