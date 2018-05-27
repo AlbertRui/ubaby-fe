@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-25 23:05:28
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-05-26 22:21:03
+ * @Last Modified time: 2018-05-27 17:06:30
  */
 'use strict';
 require('./index.css');
@@ -38,17 +38,17 @@ var navSide = {
     //渲染导航菜单
     renderNav: function() {
         // 计算Active数据
-         for (var i = 0, iLength = this.option.navList.length; i < iLength; i++) {
+        for (var i = 0, iLength = this.option.navList.length; i < iLength; i++) {
             if (this.option.navList[i].name === this.option.name) {
                 this.option.navList[i].isActive = true;
             }
-         };
-         //渲染HTML参数
-         var navHTML = _ubaby.renderHtml(templateIndex, {
-            navList : this.option.navList
-         });
-         //把HTML放入容器
-         $('.nav-side').html(navHTML);
+        };
+        //渲染HTML参数
+        var navHTML = _ubaby.renderHtml(templateIndex, {
+            navList: this.option.navList
+        });
+        //把HTML放入容器
+        $('.nav-side').html(navHTML);
     }
 };
 module.exports = navSide;

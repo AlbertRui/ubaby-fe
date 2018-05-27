@@ -1,9 +1,9 @@
 /*
-* @Author: Administrator
-* @Date:   2018-05-26 19:35:03
-* @Last Modified by:   Administrator
-* @Last Modified time: 2018-05-26 20:38:26
-*/
+ * @Author: Administrator
+ * @Date:   2018-05-26 19:35:03
+ * @Last Modified by:   Administrator
+ * @Last Modified time: 2018-05-27 17:06:30
+ */
 'use strict';
 require('./index.css');
 require('page/common/nav/index.js');
@@ -28,10 +28,10 @@ var page = {
     //加载用户信息
     loadUserInfo: function() {
         var userHtml = '';
-        _user.getUserInfo(function(res){
+        _user.getUserInfo(function(res) {
             userHtml = _ubaby.renderHtml(templateIndex, res);
             $('.panel-body').html(userHtml);
-        }, function(errorMsg){
+        }, function(errorMsg) {
             _ubaby.errorTips(errorMsg);
         });
     }

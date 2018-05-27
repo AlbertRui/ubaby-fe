@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-25 23:59:33
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-05-26 00:25:48
+ * @Last Modified time: 2018-05-27 16:17:55
  */
 'user strict';
 require('./index.css');
@@ -14,4 +14,4 @@ $(function() {
         $element = $('.' + type + '-success');
     //显示对应的提示元素
     $element.show();
-})
+});
