@@ -1,0 +1,17 @@
+/*
+* @Author: Administrator
+* @Date:   2018-05-27 10:59:22
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-05-27 11:04:23
+*/
+/* banner */
+.banner {
+    position: relative;
+    overflow: auto;
+}
+.banner li {
+    list-style: none;
+}
+.banner ul li {
+    float: left;
+}
