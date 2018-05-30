@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-27 22:33:28
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-05-28 20:28:29
+ * @Last Modified time: 2018-05-28 20:43:54
  */
 'use strict';
 
@@ -122,7 +122,7 @@ var page = {
         $(document).on('click', 'btn-submit', function() {
             //总价大于零，进行提交
             if (_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0) {
-                window.location.href = './confirm.html';
+                window.location.href = './order-confirm.html';
             } else {
                 _ubaby.errorTips('请选择商品后再提交');
             }
