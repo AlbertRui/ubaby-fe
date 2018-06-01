@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-28 20:54:57
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-06-01 18:19:56
+ * @Last Modified time: 2018-06-01 19:35:24
  */
 'use strict';
 
@@ -31,6 +31,28 @@ var _order = {
         _ubaby.request({
             url: _ubaby.getServerUrl('/order/list.do'),
             data: listParam,
+            success: resolve,
+            error: reject
+        });
+    },
+    //获取订单列表
+    getOrderDetail: function(orderNumber, resolve, reject) {
+        _ubaby.request({
+            url: _ubaby.getServerUrl('/order/detail.do'),
+            data: {
+                orderNo: orderNumber
+            },
+            success: resolve,
+            error: reject
+        });
+    },
+    //获取订单列表
+    cancelOrder: function(orderNumber, resolve, reject) {
+        _ubaby.request({
+            url: _ubaby.getServerUrl('/order/cancel.do'),
+            data: {
+                orderNo: orderNumber
+            },
             success: resolve,
             error: reject
         });
