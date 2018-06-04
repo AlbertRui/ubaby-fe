@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-06-02 22:15:03
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-06-02 22:34:28
+ * @Last Modified time: 2018-06-04 23:19:11
  */
 'use strict';
 require('./index.css');
@@ -47,8 +47,8 @@ var page = {
                 }
             }, function(errMsg) {
 
-            })
-        })
+            });
+        });
     }
 };
 $(function() {
