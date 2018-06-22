@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-06-01 18:30:47
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-06-01 19:44:50
+ * @Last Modified time: 2018-06-22 23:55:04
  */
 'use strict';
 require('./index.css');
@@ -16,7 +16,7 @@ var templateIndex = require('./index.string');
 //page逻辑部分
 var page = {
     data: {
-        orderNumber: _ubaby.getUrlParam('orderNumber');
+        orderNumber: _ubaby.getUrlParam('orderNumber')
     },
     init: function() {
         this.onLoad();
