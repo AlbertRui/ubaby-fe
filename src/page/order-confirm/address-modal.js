@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-29 21:14:31
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-05-30 23:08:46
+ * @Last Modified time: 2018-06-23 00:07:37
  */
 'use strict';
 var _ubaby = require('util/ubaby.js');
@@ -99,7 +99,7 @@ var addressModal = {
     gerReceiverInfo: function() {
         var receiverInfo = {},
             result = {
-                status: false;
+                status: false
             };
         receiverInfo.receiverName = $.trim(this.$modalWrap.find('#receiver-name').val());
         receiverInfo.receiverProvince = this.$modalWrap.find('#receiver-province').val();

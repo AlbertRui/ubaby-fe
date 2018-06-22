@@ -2,11 +2,11 @@
  * @Author: Administrator
  * @Date:   2018-05-26 15:48:26
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-05-26 17:19:12
+ * @Last Modified time: 2018-06-23 00:03:13
  */
 'user strict';
 require('./index.css');
-require('page/coubabyon/nav-simple/index.js');
+require('page/common/nav-simple/index.js');
 var _ubaby = require('util/ubaby.js');
 var _user = require('service/user-service.js');
 

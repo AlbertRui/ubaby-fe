@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-27 17:21:01
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-05-27 19:47:02
+ * @Last Modified time: 2018-06-23 00:06:07
  */
 'use strict';
 require('./index.css');
@@ -56,8 +56,8 @@ Pagination.prototype.getPaginationHtml = function() {
     var html = '',
         option = this.option,
         pageArray = [],
-        start: option.pageNum - option.pageRange > 0 ? option.pageNum - option.pageRange : 1,
-        end: option.pageNum + option.pageRange < option.pages ? option.pageNum + option.pageRange : option.pages;
+        start = option.pageNum - option.pageRange > 0 ? option.pageNum - option.pageRange : 1,
+        end = option.pageNum + option.pageRange < option.pages ? option.pageNum + option.pageRange : option.pages;
     //上一页按钮的数据
     pageArray.push({
         name: '上一页',
