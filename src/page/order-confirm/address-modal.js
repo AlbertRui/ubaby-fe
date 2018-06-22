@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-29 21:14:31
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-06-23 00:07:37
+ * @Last Modified time: 2018-06-23 00:22:36
  */
 'use strict';
 var _ubaby = require('util/ubaby.js');
@@ -127,7 +127,7 @@ var addressModal = {
             result.data = receiverInfo;
         }
         return result;
-    }
+    },
     //获取select框的选项，输入：array，输出：HTML
     getSelectOption: function(optionArray) {
         var html = '<option value="">请选择</option>';
