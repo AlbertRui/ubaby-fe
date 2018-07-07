@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-21 17:11:42
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-06-05 21:14:25
+ * @Last Modified time: 2018-07-07 21:23:56
  */
 const path = require('path');
 var webpack = require('webpack');
@@ -47,7 +47,7 @@ var config = {
     },
     output: {
         path: __dirname + '/dist/',
-        publicPath: 'dev' === WEBPACK_ENV ? '/dist/' : '//s.imitationtmall.xin/mmall-fe/dist/',
+        publicPath: 'dev' === WEBPACK_ENV ? '/dist/' : '//s.ubaby.rzhang.xin/ubaby-fe/dist/',
         filename: 'js/[name].js'
     },
     externals: {
