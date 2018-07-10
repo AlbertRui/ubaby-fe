@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-21 16:47:19
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-05-27 11:28:20
+ * @Last Modified time: 2018-07-10 22:56:28
  */
 'use strict';
 require('./index.css');
@@ -26,4 +26,7 @@ $(function() {
         var forward = $(this).hasClass('prev') ? 'prev' : 'next';
         $slider.data('unslider')[forward]();
     });
+});
+$(function () {
+    $('.banner').unslider();
 });
