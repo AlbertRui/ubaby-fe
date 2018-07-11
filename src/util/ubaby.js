@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-22 22:56:44
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-06-23 00:16:01
+ * @Last Modified time: 2018-07-11 00:01:14
  */
 'use strict';
 var Hogan = require('hogan.js');
@@ -46,7 +46,7 @@ var _ubaby = {
     },
     //渲染html模板
     renderHtml: function(htmlTemplate, data) {
-        var template = Hagan.compile(htmlTemplate),
+        var template = Hogan.compile(htmlTemplate),
             result = template.render(data);
         return result;
     },
