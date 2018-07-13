@@ -2,14 +2,13 @@
  * @Author: Administrator
  * @Date:   2018-05-25 20:03:15
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-05-27 17:06:35
+ * @Last Modified time: 2018-07-13 23:11:51
  */
 'use strict';
 require('./index.css');
 var _ubaby = require('util/ubaby.js');
 var _user = require('service/user-service.js');
 var _cart = require('service/cart-service.js');
-// 导航
 var nav = {
     init: function() {
         this.bindEvent();
@@ -18,33 +17,30 @@ var nav = {
         return this;
     },
     bindEvent: function() {
-        // 登录点击事件
         $('.js-login').click(function() {
             _ubaby.doLogin();
         });
-        // 注册点击事件
-        $('.js-register').click(function() {
-            window.location.href = './user-register.html';
-        });
-        // 退出点击事件
         $('.js-logout').click(function() {
             _user.logout(function(res) {
-                window.location.reload();
+                window.location.href = './index.html';
             }, function(errMsg) {
                 _ubaby.errorTips(errMsg);
             });
         });
-    },
-    // 加载用户信息
-    loadUserInfo: function() {
-        _user.checkLogin(function(res) {
-            $('.user.not-login').hide().siblings('.user.login').show()
-                .find('.username').text(res.username);
-        }, function(errMsg) {
-            // do nothing
+        $('.js-register').click(function() {
+            window.location.href = './user-register.html';
         });
     },
-    // 加载购物车数量
+    //加载用户信息
+    loadUserInfo: function() {
+        _user.checkLogin(function(res) {
+            $('.user.no-login').hide() //找到节点并隐藏
+                .siblings('.user.login').show() //找到兄弟节点然后显示
+                .find('.username').text(res.username); //查找他的子节点并修改
+        }, function(errMsg) {
+            //doNothing
+        });
+    },
     loadCartCount: function() {
         _cart.getCartCount(function(res) {
             $('.nav .cart-count').text(res || 0);
@@ -53,5 +49,4 @@ var nav = {
         });
     }
 };
-
 module.exports = nav.init();

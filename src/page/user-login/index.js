@@ -2,8 +2,9 @@
  * @Author: Administrator
  * @Date:   2018-05-21 17:42:58
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-07-13 22:46:49
+ * @Last Modified time: 2018-07-13 23:09:00
  */
+'use strict';
 require('./index.css');
 require('page/common/nav-simple/index.js');
 var _user = require('service/user-service.js');
