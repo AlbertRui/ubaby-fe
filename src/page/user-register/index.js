@@ -2,59 +2,56 @@
  * @Author: Administrator
  * @Date:   2018-05-26 15:48:26
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-06-23 00:03:13
+ * @Last Modified time: 2018-07-13 22:09:16
  */
-'user strict';
 require('./index.css');
 require('page/common/nav-simple/index.js');
-var _ubaby = require('util/ubaby.js');
 var _user = require('service/user-service.js');
-
-//表单里的错误提示
+var _ubaby = require('util/ubaby.js');
+// 表单里的错误提示
 var formError = {
-    show: function(errorMsg) {
-        $('.error-item').show().find('error-msg').text(errorMsg);
+    show: function (errMsg) {
+        $('.error-item').show().find('.err-msg').text(errMsg);
     },
-    hide: function() {
-        $('.error-item').hide().find('error-msg').text('');
+    hide: function () {
+        $('.error-item').hide().find('.err-msg').text('');
     }
 };
 
 //page逻辑部分
 var page = {
-    init: function() {
+    init: function () {
         this.bindEvent();
     },
-    bindEvent: function() {
+    bindEvent: function () {
         var _this = this;
-        //验证username
-        $('#username').blur(function() {
+        // 验证username
+        //失去焦点的时候触发
+        $('#username').blur(function () {
+            //这个触发里面this指向username控件本身
             var username = $.trim($(this).val());
-            //如果用户名为空，我们不做验证
             if (!username) {
+                //用户名为空就不做验证
                 return;
             }
-            //异步验证用户名是否存在
-            _user.checkUsername(username, function(res) {
+            _user.checkUsername(username, function (res) {
                 formError.hide();
-            }, function(errorMsg) {
-                formError.show(errorMsg);
+            }, function (errMsg) {
+                formError.show(errMsg);
             })
         });
-        //注册按钮的点击
-        $('#submit').click(function() {
+        // 注册按钮
+        $('#submit').click(function () {
             _this.submit();
         });
-        //如果按下回车，也进行提交
-        $('user-content').keyup(function(e) {
-            //keyCode为13表示回车键
+        $('.user-content').keyup(function (e) {
+            //回车键监听
             if (e.keyCode === 13) {
                 _this.submit();
             }
         });
     },
-    //提交表单
-    submit: function() {
+    submit: function () {
         var formData = {
                 username: $.trim($('#username').val()),
                 password: $.trim($('#password').val()),
@@ -66,29 +63,27 @@ var page = {
             },
             //表单验证结果
             validateResult = this.formValidate(formData);
-        //验证成功
         if (validateResult.status) {
-            _user.register(formData, function(res) {
+            // 验证成功
+            _user.register(formData, function (res) {
                 window.location.href = './result.html?type=register';
-            }, function(errorMsg) {
-                formError.show(errorMsg);
+            }, function (err) {
+                formError.show(err);
             });
-        } else { //验证失败，错误提示
+        } else {
+            // 验证失败
             formError.show(validateResult.msg);
         }
     },
-    //表单字段验证
-    formValidate: function(formData) {
+    formValidate: function (formData) {
         var result = {
             status: false,
             msg: ''
         };
-        // 验证用户名是否为空
         if (!_ubaby.validate(formData.username, 'require')) {
             result.msg = '用户名不能为空';
             return result;
         }
-        // 验证密码是否为空
         if (!_ubaby.validate(formData.password, 'require')) {
             result.msg = '密码不能为空';
             return result;
@@ -125,10 +120,11 @@ var page = {
         }
         // 通过验证，返回正确提示
         result.status = true;
-        result.msg = '验证通过';
+        result.msg = "验证通过";
         return result;
     }
 };
-$(function() {
+//当JQuery加载完成的时候会触发
+$(function () {
     page.init();
 });
