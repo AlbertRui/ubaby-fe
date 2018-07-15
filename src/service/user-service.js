@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-26 15:23:47
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-05-26 15:25:50
+ * @Last Modified time: 2018-07-16 00:22:49
  */
 
 'use strict';
@@ -87,7 +87,7 @@ var _user = {
     // 获取用户信息
     getUserInfo: function(resolve, reject) {
         _ubaby.request({
-            url: _ubaby.getServerUrl('/user/get_information.do'),
+            url: _ubaby.getServerUrl('/user/get_user_details.do'),
             method: 'POST',
             success: resolve,
             error: reject
@@ -96,7 +96,7 @@ var _user = {
     // 更新个人信息
     updateUserInfo: function(userInfo, resolve, reject) {
         _ubaby.request({
-            url: _ubaby.getServerUrl('/user/update_information.do'),
+            url: _ubaby.getServerUrl('/user/update_user_info.do'),
             data: userInfo,
             method: 'POST',
             success: resolve,
