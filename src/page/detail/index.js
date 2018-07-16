@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-27 20:01:08
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-07-16 22:11:23
+ * @Last Modified time: 2018-07-16 23:02:28
  */
 'use strict';
 
@@ -92,7 +92,7 @@ var page = {
     // 数据匹配
     filter: function(data) {
         // 因为是引用传递，所以不需要返回
-        data.subImages = data.subImages.split(',');
+        data.subImage = data.subImage.split(',');
     },
     refreshCountBtn: function(currentCount, maxCount) {
         if (parseInt(currentCount) === 1) {
