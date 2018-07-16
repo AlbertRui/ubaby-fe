@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-22 22:56:44
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-07-11 00:01:14
+ * @Last Modified time: 2018-07-16 22:40:54
  */
 'use strict';
 var Hogan = require('hogan.js');
@@ -49,6 +49,22 @@ var _ubaby = {
         var template = Hogan.compile(htmlTemplate),
             result = template.render(data);
         return result;
+    },
+    //loading动画
+    showLoading: function(target) {
+        if (target instanceof jQuery) {
+            target.html('<div class="loading"></div>');
+        } else {
+            $(target).html('<div class="loading"></div>');
+        }
+    },
+    //显示错误提示信息
+    showErrorMessage: function(target, errMsg) {
+        if (target instanceof jQuery) {
+            target.html('<p class="err-tip">' + errMsg + '</p>');
+        } else {
+            $(target).html('<p class="err-tip">' + errMsg + '</p>');
+        }
     },
     //成功提示
     successTips: function(msg) {
