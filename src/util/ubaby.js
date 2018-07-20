@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-22 22:56:44
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-07-16 22:40:54
+ * @Last Modified time: 2018-07-20 20:51:49
  */
 'use strict';
 var Hogan = require('hogan.js');
@@ -86,7 +86,7 @@ var _ubaby = {
             return /^1\d{10}$/.test(value);
         }
         if ('email' === type) {
-            return /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/.test(value);
+            return  /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/.test(value);
         }
     },
     //统一登录处理
