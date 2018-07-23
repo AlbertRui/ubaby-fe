@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-26 15:21:51
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-07-23 22:07:06
+ * @Last Modified time: 2018-07-23 22:13:46
  */
 
 'use strict';
@@ -85,7 +85,7 @@ var _cart = {
     // 删除指定商品
     deleteCartProduct: function(productIds, resolve, reject) {
         _ubaby.request({
-            url: _ubaby.getServerUrl('/cart/delete_product.do'),
+            url: _ubaby.getServerUrl('/cart/delete.do'),
             data: {
                 productIds: productIds
             },
