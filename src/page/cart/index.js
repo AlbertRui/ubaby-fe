@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-27 22:33:28
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-07-23 18:31:34
+ * @Last Modified time: 2018-07-23 19:17:39
  */
 'use strict';
 
@@ -167,13 +167,13 @@ var page = {
         });
     },
     filter: function (data) {
-        data.notEmpty = !!data.cartProductVoList.length;
-        for (var i = 0; i < data.cartProductVoList.length; i++) {
-            if (data.cartProductVoList[i].quantity < data.cartProductVoList[i].productStock) {
-                data.cartProductVoList[i].hasNext = true;
+        data.notEmpty = !!data.cartProducts.length;
+        for (var i = 0; i < data.cartProducts.length; i++) {
+            if (data.cartProducts[i].quantity < data.cartProducts[i].productStock) {
+                data.cartProducts[i].hasNext = true;
             }
-            if (data.cartProductVoList[i].quantity > 1) {
-                data.cartProductVoList[i].hasPrevious = true;
+            if (data.cartProducts[i].quantity > 1) {
+                data.cartProducts[i].hasPrevious = true;
             }
         }
     }

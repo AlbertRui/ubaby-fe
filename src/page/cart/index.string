@@ -22,7 +22,7 @@
     </table>
 </div>
 <div class="cart-list">
-    {{#cartProductVoList}}
+    {{#cartProducts}}
     <table class="cart-table" data-product-id="{{productId}}">
         <tr>
             <td class="cart-cell cell-check">
@@ -65,7 +65,7 @@
             </td>
         </tr>
     </table>
-    {{/cartProductVoList}}
+    {{/cartProducts}}
 </div>
 <div class="cart-footer">
     <div class="select-con">
