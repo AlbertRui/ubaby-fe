@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-26 15:21:51
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-06-22 23:11:49
+ * @Last Modified time: 2018-07-23 22:07:06
  */
 
 'use strict';
@@ -83,7 +83,7 @@ var _cart = {
         });
     },
     // 删除指定商品
-    deleteProduct: function(productIds, resolve, reject) {
+    deleteCartProduct: function(productIds, resolve, reject) {
         _ubaby.request({
             url: _ubaby.getServerUrl('/cart/delete_product.do'),
             data: {
