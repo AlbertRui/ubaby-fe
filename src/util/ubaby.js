@@ -2,10 +2,11 @@
  * @Author: Administrator
  * @Date:   2018-05-22 22:56:44
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-07-20 21:19:21
+ * @Last Modified time: 2018-07-23 21:55:43
  */
 'use strict';
 var Hogan = require('hogan.js');
+var _dialog = require('util/dialog/index.js');
 var conf = {
     serverHost: ''
 };
@@ -65,6 +66,28 @@ var _ubaby = {
         } else {
             $(target).html('<p class="err-tip">' + errMsg + '</p>');
         }
+    },
+    //确认操作弹窗
+    confirmTips: function (msg, confirm, cancel) {
+        _dialog.show({
+            isConfirm: true,
+            message: msg || '是否确认该操作？',
+            target: 'body',
+            onConfirm: function () {
+                _dialog.hide();
+                typeof  confirm === 'function' && confirm();
+            },
+            onCancel: function () {
+                _dialog.hide();
+                typeof  cancel === 'function' && cancel();
+            }
+        });
+
+        // if (window.confirm(msg || '是否确认该操作？')) {
+        //     typeof  confirm === 'function' && confirm();
+        // } else {
+        //     typeof  cancel === 'function' && cancel();
+        // }
     },
     //成功提示
     successTips: function(msg) {
