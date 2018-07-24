@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2018-05-28 20:44:45
  * @Last Modified by:   Administrator
- * @Last Modified time: 2018-07-23 19:56:02
+ * @Last Modified time: 2018-07-24 21:18:05
  */
 'use strict';
 
@@ -42,7 +42,7 @@ var page = {
         $(document).on('click', '.order-submit', function () {
             var shippingId = _this.data.selectedAddressId;
             if (shippingId) {
-                _order.create({
+                _order.createOrder({
                     shippingId: shippingId
                 }, function (res) {
                     window.location.href = './payment.html?orderNumber=' + res.orderNo;
